@@ -23,13 +23,13 @@ public class IMCCalculatorTest {
         assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Peso normal"));
 
         persona.setPeso(50.0);
-        assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Bajo peso"));
+        assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Delgadez moderada"));
 
         persona.setPeso(80.0);
         assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Sobrepeso"));
 
         persona.setPeso(95.0);
-        assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Obesidad"));
+        assertThat(imcService.determinarCategoriaIMC(calculadora.calcularIMC()), is("Obesidad leve"));
     }
 
     @Test
